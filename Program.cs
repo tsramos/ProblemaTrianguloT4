@@ -16,10 +16,8 @@ namespace ProblemaTriangulo
             yB = double.Parse(Console.ReadLine());
             yC = double.Parse(Console.ReadLine());
 
-            double p = (xA + xB + xC) / 2;
-            double areaX = Math.Sqrt(p * (p - xA) * (p - xB) * (p - xC));
-            p = (yA + yB + yC) / 2;
-            double areaY = Math.Sqrt(p * (p - yA) * (p - yB) * (p - yC));
+            double areaX = CalculoArea(xA, xB, xC);
+            double areaY = CalculoArea(yA, yB, yC);
 
             Console.WriteLine($"Valor area X : {areaX.ToString("F2")}");
             Console.WriteLine($"Valor area Y : {areaY.ToString("F2")}");
@@ -32,6 +30,13 @@ namespace ProblemaTriangulo
             {
                 Console.WriteLine("Area de Y é maior");
             }
+        }
+
+        public static double CalculoArea(double a, double b , double c)
+        {
+            double p = (a + b + c) / 2;
+            double area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            return area;
         }
     }
 }
