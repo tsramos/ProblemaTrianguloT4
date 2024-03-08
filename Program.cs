@@ -6,18 +6,21 @@ namespace ProblemaTriangulo
     {
         static void Main(string[] args)
         {
-            double xA, xB, xC, yA, yB, yC;
+            Triangulo x;
+            x = new Triangulo();
+            Triangulo y = new Triangulo();
+            
             Console.WriteLine("Informe os lados do triângulo X;");
-            xA = double.Parse(Console.ReadLine());
-            xB = double.Parse(Console.ReadLine());
-            xC = double.Parse(Console.ReadLine());
+            x.A = double.Parse(Console.ReadLine());
+            x.B = double.Parse(Console.ReadLine());
+            x.C = double.Parse(Console.ReadLine());
             Console.WriteLine("Inform os lados do triângulo Y");
-            yA = double.Parse(Console.ReadLine());
-            yB = double.Parse(Console.ReadLine());
-            yC = double.Parse(Console.ReadLine());
+            y.A = double.Parse(Console.ReadLine());
+            y.B = double.Parse(Console.ReadLine());
+            y.C = double.Parse(Console.ReadLine());
 
-            double areaX = CalculoArea(xA, xB, xC);
-            double areaY = CalculoArea(yA, yB, yC);
+            double areaX = CalculoArea(x.A, x.B, x.C);
+            double areaY = CalculoArea(y.A, y.B, y.C);
 
             Console.WriteLine($"Valor area X : {areaX.ToString("F2")}");
             Console.WriteLine($"Valor area Y : {areaY.ToString("F2")}");
